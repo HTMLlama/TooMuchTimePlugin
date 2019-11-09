@@ -1,11 +1,10 @@
 <idea-plugin>
     <id>com.hugheswd.toomuchtime</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>Too Much Time</name>
+    <vendor email="social@hugheswd.com" url="http://www.hugheswd.com">HughesWD</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+        An IntelliJ plugin that calculates how much time you spend compiling
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -20,5 +19,13 @@
 
     <actions>
         <!-- Add your actions here -->
+        <group
+            id="HelloAction"
+            text="Hello Too Much Time!!"
+            description="This will tell you how much time you spend building and compiling">
+            <add-to-group group-id="BuildMenu" anchor="last" />
+            <action class="TimeAction" id="TooMuchTime.Actions.TimeAction" text="How Much Time?" />
+
+        </group>
     </actions>
 </idea-plugin>
